@@ -1,6 +1,6 @@
 # Mundiagua Image Processing
 
-Processes uploaded images to S3 and generates thumbnails.
+Processes telegram messages and tasks.
 
 ## Useful commands
 
