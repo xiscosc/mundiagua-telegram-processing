@@ -1,7 +1,6 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 import { getSecretFromSecretsManager } from "./aws/aws-helper";
 import { TelegramService } from "./service/telegram-service";
-const Sentry = require("@sentry/node");
 const log = require("lambda-log");
 
 export const handler = async (
@@ -20,7 +19,6 @@ export const handler = async (
     await service.handleMessage(message, chatId);
   } catch (e) {
     log.error(e);
-    Sentry.captureException(e);
   }
 
   return { statusCode: 200, body: "OK" };

@@ -42,8 +42,6 @@
     "@aws-sdk/client-dynamodb": "3.42.0",
     "@aws-sdk/client-secrets-manager": "3.42.0",
     "@aws-sdk/lib-dynamodb": "3.42.0",
-    "@sentry/node": "^6.16.1",
-    "@sentry/tracing": "^6.16.1",
     "lambda-log": "3.1.0",
     "axios": "0.24.0",
     "node-telegram-bot-api": "^0.54.0"

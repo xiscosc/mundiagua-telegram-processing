@@ -16,7 +16,6 @@ import { SnsEventSource } from "@aws-cdk/aws-lambda-event-sources";
 interface MundiaguaTelegramStackProps extends StackProps {
   stage: string;
   telegramApiKeyArn: string;
-  sentryDsn: string;
 }
 
 export class MundiaguaTelegramProcessingStack extends Stack {
@@ -64,7 +63,6 @@ export class MundiaguaTelegramProcessingStack extends Stack {
         environment: {
           telegramApiKeyArn: token.secretArn,
           dynamoTable: telegramTable.tableName,
-          sentryDsn: this.props.sentryDsn,
           sentryEnv: this.props.stage,
         },
         bundling: {
@@ -89,7 +87,6 @@ export class MundiaguaTelegramProcessingStack extends Stack {
         environment: {
           telegramApiKeyArn: token.secretArn,
           dynamoTable: telegramTable.tableName,
-          sentryDsn: this.props.sentryDsn,
           sentryEnv: this.props.stage,
         },
         bundling: {

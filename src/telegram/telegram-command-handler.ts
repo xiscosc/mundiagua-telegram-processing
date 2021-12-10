@@ -1,15 +1,9 @@
 import { TelegramService } from "./service/telegram-service";
 import { getSecretFromSecretsManager } from "./aws/aws-helper";
 import { TelegramCommand } from "./type/telegram-comand";
-const Sentry = require("@sentry/node");
 const log = require("lambda-log");
 
 export const handler = async (event: any = {}): Promise<any> => {
-  Sentry.init({
-    dsn: process.env.sentryDsn as string,
-    tracesSampleRate: 0,
-    environment: process.env.sentryEnv as string,
-  });
   try {
     const service = new TelegramService(
       await getSecretFromSecretsManager(
@@ -26,6 +20,5 @@ export const handler = async (event: any = {}): Promise<any> => {
     );
   } catch (e) {
     log.error(e);
-    Sentry.captureException(e);
   }
 };
