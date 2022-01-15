@@ -1,17 +1,17 @@
-import { App, Duration, RemovalPolicy, Stack, StackProps } from "@aws-cdk/core";
-import { Runtime } from "@aws-cdk/aws-lambda";
-import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
+import { App, Duration, RemovalPolicy, Stack, StackProps } from "aws-cdk-lib";
+import { Runtime } from "aws-cdk-lib/aws-lambda";
+import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import * as path from "path";
-import { LambdaIntegration, RestApi } from "@aws-cdk/aws-apigateway";
-import { Secret } from "@aws-cdk/aws-secretsmanager";
+import { LambdaIntegration, RestApi } from "aws-cdk-lib/aws-apigateway";
+import { Secret } from "aws-cdk-lib/aws-secretsmanager";
 import {
   AttributeType,
   BillingMode,
   ProjectionType,
   Table,
-} from "@aws-cdk/aws-dynamodb";
-import { Topic } from "@aws-cdk/aws-sns";
-import { SnsEventSource } from "@aws-cdk/aws-lambda-event-sources";
+} from "aws-cdk-lib/aws-dynamodb";
+import { Topic } from "aws-cdk-lib/aws-sns";
+import { SnsEventSource } from "aws-cdk-lib/aws-lambda-event-sources";
 
 interface MundiaguaTelegramStackProps extends StackProps {
   stage: string;
