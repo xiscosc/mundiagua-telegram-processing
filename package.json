@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@tsconfig/node14": "1.0.1",
-    "@types/aws-lambda": "^8.10.85",
+    "@types/aws-lambda": "8.10.85",
     "@types/jest": "27.0.3",
     "@types/node": "10.17.27",
     "aws-cdk-lib": "2.8.0",
@@ -37,6 +37,6 @@
     "@aws-sdk/lib-dynamodb": "3.42.0",
     "lambda-log": "3.1.0",
     "axios": "0.24.0",
-    "node-telegram-bot-api": "^0.54.0"
+    "node-telegram-bot-api": "0.54.0"
   }
 }
