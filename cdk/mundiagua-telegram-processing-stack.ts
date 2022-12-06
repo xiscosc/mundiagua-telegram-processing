@@ -53,7 +53,7 @@ export class MundiaguaTelegramProcessingStack extends Stack {
       `telegramMessageLambda-${this.props.stage}`,
       {
         memorySize: 512,
-        runtime: Runtime.NODEJS_14_X,
+        runtime: Runtime.NODEJS_18_X,
         handler: "handler",
         entry: path.join(
           __dirname,
@@ -77,7 +77,7 @@ export class MundiaguaTelegramProcessingStack extends Stack {
       `telegramCommandLambda-${this.props.stage}`,
       {
         memorySize: 512,
-        runtime: Runtime.NODEJS_14_X,
+        runtime: Runtime.NODEJS_18_X,
         handler: "handler",
         entry: path.join(
           __dirname,
